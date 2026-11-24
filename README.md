@@ -1,21 +1,22 @@
 # KevinTV Player — LG QA Demo
 
-Lista M3U de prueba para LG webOS, sin contenido comercial.
+Lista M3U pública de prueba para LG webOS. URL para el portal:
 
-**URL de lista (para portal KevinTV):** https://raw.githubusercontent.com/kevintv-player/kevintv-demo/main/demo_lg.m3u
+https://raw.githubusercontent.com/kevintv-player/kevintv-demo/main/demo_lg.m3u
 
-## Estructura (seis entradas)
-- TV Demo: 2 entradas, `tvg-type="live"`
-- VOD | Peliculas: 2 entradas, `tvg-type="movie"`
-- VOD | Series: 2 entradas, `tvg-type="series"`
+## Estado de la prueba (24 noviembre 2026)
 
-Cada entrada tiene `tvg-id`, `tvg-name`, `tvg-type`, `tvg-logo`, `group-title` y una URL MP4.
+- 2 entradas TV, 2 Películas y 2 episodios Serie, con sintaxis M3U extendida clásica `#EXTINF`, `tvg-id`, `tvg-name`, `tvg-logo`, `group-title`.
+- 5 entradas apuntan al MP4 `flower.mp4` de MDN (CC0), que el usuario verificó reproduciendo en KevinTV C3h.
+- La película 01 apunta a `https://media.w3.org/2010/05/sintel/trailer.mp4`, una nueva fuente candidata MP4 que **falta probar en webOS**.
+- Se retiraron por ahora los enlaces a Google Cloud Storage que el usuario reportó como no reproducibles.
+- La película 01 utiliza nombre correcto «Sintel - Tráiler de prueba» y no lleva la portada anterior de Big Buck Bunny para evitar atribución visual equivocada.
+- Los demás títulos e imágenes son marcadores de demostración; no representan videos diferentes.
 
-**Fuentes provisionales para aislar errores de reproduccion: Big Buck Bunny (c) 2008 Blender Foundation, licencia CC BY 3.0, alojado en el bucket de pruebas GTV de Google; y el clip CC0 `flower.mp4` de MDN. Los seis elementos alternan estas dos fuentes para contrastar resultados. Las etiquetas de catalogo son provisionales.
+## Próximos pasos
+Sincronizar la misma lista en el emulador. Probar la película 01 (W3C) y una entrada Demo 02 (MDN). Si W3C no reproduce, cambiar solo su URL por el enlace MDN comprobado, sin modificar la aplicación.
 
-**Limitación confirmada de KevinTV C3g:** El parser M3U actual interpreta todas las entradas como live TV e ignora `tvg-type`; devuelve listas vacías para `get_vod_categories`, `get_vod_streams`, `get_series_categories` y `get_series`. Añadir atributos a esta lista NO habilita las pestañas Películas/Series de esa versión. Se requiere soporte adicional en el reproductor o una fuente Xtream real para habilitarlas.
+Esta lista es para pruebas técnicas; no es una biblioteca de certificación final. La compatibilidad de URLs depende de la respuesta del host, codificación y condiciones de reproducción en LG webOS.
 
-Para cambiar contenidos, sustituir la URL situada inmediatamente después del `#EXTINF` correspondiente. Verificar que los enlaces sean directos y reproducibles por webOS; un enlace compartido de Drive puede no serlo.
-
-## Prueba de reproduccion (noviembre 2026)
-La lista alterna tres URLs `https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4` y tres URLs `https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4`. No se ha probado aun en el emulador/televisor LG. Esta mezcla es temporal, no material final de certificacion. Si falla solo una fuente, revisar el servidor o la compatibilidad de ese MP4; si fallan ambas, revisar el reproductor y el codigo de error concreto.
+Referencia licencia Blender Sintel: https://studio.blender.org/films/sintel/
+MDN: https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4

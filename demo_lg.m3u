@@ -1,23 +1,13 @@
 #EXTM3U
-# KevinTV Player LG QA — lista de prueba M3U enriquecida
-# (c) 2008 Blender Foundation — Big Buck Bunny — CC BY 3.0
-# Los seis elementos usan temporalmente el mismo MP4 de Blender.
-# Nota: tvg-type es una convencion admitida por algunos players, no por KevinTV C3g para VOD.
-
-#EXTINF:-1 tvg-id="kevintv-demo-tv-01" tvg-name="KevinTV Demo - Animacion" tvg-type="live" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="TV Demo | Animacion",Canal Demo 01 - Animacion
+#EXTINF:-1 tvg-id="kevintv-tv-01" tvg-name="TV | Animación 01" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="⭐ TV | DEMO",TV | Animación 01
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
-
-#EXTINF:-1 tvg-id="kevintv-demo-tv-02" tvg-name="KevinTV Demo - Cine" tvg-type="live" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="TV Demo | Cine",Canal Demo 02 - Cine
+#EXTINF:-1 tvg-id="kevintv-tv-02" tvg-name="TV | Cine 02" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="⭐ TV | DEMO",TV | Cine 02
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
-
-#EXTINF:-1 tvg-id="kevintv-demo-movie-01" tvg-name="Big Buck Bunny" tvg-type="movie" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="VOD | Peliculas | Animacion",Big Buck Bunny (2008) - Demo
+#EXTINF:-1 tvg-id="kevintv-pelicula-01" tvg-name="Big Buck Bunny (2008)" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="🎬 PELÍCULAS | ANIMACIÓN",Big Buck Bunny (2008)
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
-
-#EXTINF:-1 tvg-id="kevintv-demo-movie-02" tvg-name="Película de demostración 02" tvg-type="movie" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="VOD | Peliculas | Cortometrajes",Pelicula de demostracion 02 (video provisional)
+#EXTINF:-1 tvg-id="kevintv-pelicula-02" tvg-name="Película Demo 02" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="🎬 PELÍCULAS | CORTOMETRAJES",Película Demo 02
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
-
-#EXTINF:-1 tvg-id="kevintv-demo-series-01" tvg-name="Serie de Demostracion S01E01" tvg-type="series" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="VOD | Series | Demo",Serie de demostracion - T1 E1 (video provisional)
+#EXTINF:-1 tvg-id="kevintv-serie-01" tvg-name="Serie Demo | T1 E1" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="📺 SERIES | TEMPORADA 1",Serie Demo | Temporada 1 Episodio 1
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
-
-#EXTINF:-1 tvg-id="kevintv-demo-series-02" tvg-name="Serie de Demostracion S01E02" tvg-type="series" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="VOD | Series | Demo",Serie de demostracion - T1 E2 (video provisional)
+#EXTINF:-1 tvg-id="kevintv-serie-02" tvg-name="Serie Demo | T1 E2" tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg" group-title="📺 SERIES | TEMPORADA 1",Serie Demo | Temporada 1 Episodio 2
 https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4

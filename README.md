@@ -1,21 +1,18 @@
 # KevinTV Player — LG QA Demo
 
-Lista M3U de prueba para certificación LG webOS. **No contiene suscripciones IPTV ni contenido comercial**.
+Lista M3U de prueba para LG webOS, sin contenido comercial.
 
-## URL M3U para el portal
-https://raw.githubusercontent.com/kevintv-player/kevintv-demo/main/demo_lg.m3u
+**URL de lista (para portal KevinTV):** https://raw.githubusercontent.com/kevintv-player/kevintv-demo/main/demo_lg.m3u
 
-## Grupos provisionales
-- 01 TV Demo: 2 entradas
-- 02 Peliculas Demo: 2 entradas
-- 03 Series Demo: 2 entradas
+## Estructura (seis entradas)
+- TV Demo: 2 entradas, `tvg-type="live"`
+- VOD | Peliculas: 2 entradas, `tvg-type="movie"`
+- VOD | Series: 2 entradas, `tvg-type="series"`
 
-**Todas las entradas utilizan temporalmente la misma fuente:** Big Buck Bunny (c) 2008 Blender Foundation — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Fuente: https://peach.blender.org/ . Se debe conservar la atribución en usos posteriores.
+Cada entrada tiene `tvg-id`, `tvg-name`, `tvg-type`, `tvg-logo`, `group-title` y una URL MP4.
 
-> Importante: en KevinTV C3g, los grupos M3U se presentan como categorías de TV en vivo. No equivalen a categorías VOD de películas ni a temporadas de series.
+**Origen de prueba:** Big Buck Bunny, (c) 2008 Blender Foundation, licencia [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Portada: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Big_buck_bunny_poster_big.jpg). Conservar atribución. Todas las entradas usan temporalmente el mismo video, solo para probar organización.
 
-Para sustituir el video, cambiar solo la URL inmediatamente posterior a la línea `#EXTINF` correspondiente, manteniendo intacta la estructura.
+**Limitación confirmada de KevinTV C3g:** El parser M3U actual interpreta todas las entradas como live TV e ignora `tvg-type`; devuelve listas vacías para `get_vod_categories`, `get_vod_streams`, `get_series_categories` y `get_series`. Añadir atributos a esta lista NO habilita las pestañas Películas/Series de esa versión. Se requiere soporte adicional en el reproductor o una fuente Xtream real para habilitarlas.
 
-Los links tienen que apuntar a un recurso MP4/HLS directo reproducible en webOS: un enlace para compartir de Drive o una página de Vimeo no suele ser suficiente.
-
-No se ha comprobado aún la reproducción ni el acceso CORS al archivo MP4 en un televisor LG. Probar antes de remitir esta fuente a LG QA.
+Para cambiar contenidos, sustituir la URL situada inmediatamente después del `#EXTINF` correspondiente. Verificar que los enlaces sean directos y reproducibles por webOS; un enlace compartido de Drive puede no serlo.
